@@ -87,6 +87,7 @@ foreach ( $plans as $plan ) {
 	$product_id = $product->save();
 
 	update_post_meta( $product_id, '_pushpaseva_flower_items', $plan['items'] );
+	update_post_meta( $product_id, '_pushpaseva_product_type', 'subscription' );
 
 	WP_CLI::success( "Saved '{$plan['name']}' as product #{$product_id}" );
 }
