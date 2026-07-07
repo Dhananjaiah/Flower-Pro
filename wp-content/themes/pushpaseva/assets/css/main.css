@@ -1,0 +1,395 @@
+/* ==========================================================================
+   PushpaSeva — base tokens
+   ========================================================================== */
+:root {
+	--ps-saffron: #ff9933;
+	--ps-saffron-dark: #e6802b;
+	--ps-deep-green: #1b4332;
+	--ps-deep-green-light: #2d6a4f;
+	--ps-gold: #d4af37;
+	--ps-cream: #fffaf3;
+	--ps-white: #ffffff;
+	--ps-radius: 16px;
+	--ps-shadow: 0 8px 24px rgba(27, 67, 50, 0.08);
+	--ps-font: "Poppins", system-ui, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: var(--ps-font);
+	background: var(--ps-cream);
+	color: var(--ps-deep-green);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: var(--ps-deep-green);
+	text-decoration: none;
+}
+
+.ps-container {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.ps-btn {
+	display: inline-block;
+	padding: 0.85rem 1.75rem;
+	border-radius: 999px;
+	font-weight: 600;
+	font-size: 0.95rem;
+	border: 2px solid transparent;
+	cursor: pointer;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.ps-btn:hover {
+	transform: translateY(-2px);
+}
+.ps-btn--primary {
+	background: var(--ps-saffron);
+	color: var(--ps-white);
+	box-shadow: 0 6px 16px rgba(255, 153, 51, 0.35);
+}
+.ps-btn--primary:hover {
+	background: var(--ps-saffron-dark);
+}
+.ps-btn--ghost {
+	background: transparent;
+	border-color: var(--ps-deep-green);
+	color: var(--ps-deep-green);
+}
+.ps-btn--ghost:hover {
+	background: var(--ps-deep-green);
+	color: var(--ps-white);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.ps-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: rgba(255, 250, 243, 0.9);
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid rgba(27, 67, 50, 0.08);
+}
+.ps-header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.5rem;
+}
+.ps-logo {
+	font-weight: 700;
+	font-size: 1.35rem;
+	color: var(--ps-deep-green);
+}
+.ps-header__nav {
+	display: flex;
+	align-items: center;
+	gap: 1.75rem;
+	font-weight: 500;
+}
+.ps-header__nav a:hover {
+	color: var(--ps-saffron-dark);
+}
+.ps-header__cart {
+	background: var(--ps-deep-green);
+	color: var(--ps-white) !important;
+	padding: 0.4rem 1rem;
+	border-radius: 999px;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.ps-hero {
+	background: radial-gradient(circle at top right, rgba(255, 153, 51, 0.12), transparent 55%),
+		radial-gradient(circle at bottom left, rgba(27, 67, 50, 0.08), transparent 55%);
+	padding: 5rem 0 4rem;
+}
+.ps-hero__inner {
+	text-align: center;
+	max-width: 760px;
+}
+.ps-hero__headline {
+	font-size: clamp(2rem, 4.5vw, 3.25rem);
+	font-weight: 700;
+	line-height: 1.15;
+	margin: 0 0 1.25rem;
+	color: var(--ps-deep-green);
+}
+.ps-hero__subheading {
+	font-size: 1.15rem;
+	color: var(--ps-deep-green-light);
+	margin: 0 0 2.25rem;
+}
+.ps-hero__cta {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+.ps-section {
+	padding: 4.5rem 0;
+}
+.ps-section__title {
+	text-align: center;
+	font-size: clamp(1.6rem, 3vw, 2.25rem);
+	font-weight: 700;
+	margin: 0 0 2.75rem;
+	color: var(--ps-deep-green);
+}
+
+/* Why Choose Us */
+.ps-why__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 1.5rem;
+}
+.ps-why__item {
+	background: var(--ps-white);
+	border-radius: var(--ps-radius);
+	box-shadow: var(--ps-shadow);
+	padding: 2rem 1.25rem;
+	text-align: center;
+	transition: transform 0.15s ease;
+}
+.ps-why__item:hover {
+	transform: translateY(-4px);
+}
+.ps-why__icon {
+	font-size: 2rem;
+	display: block;
+	margin-bottom: 0.75rem;
+}
+.ps-why__item h3 {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+/* Packages */
+.ps-packages {
+	background: var(--ps-white);
+}
+.ps-packages__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.75rem;
+}
+.ps-plan-card {
+	background: var(--ps-cream);
+	border: 1px solid rgba(27, 67, 50, 0.08);
+	border-radius: var(--ps-radius);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ps-plan-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--ps-shadow);
+}
+.ps-plan-card__name {
+	margin: 0 0 0.5rem;
+	font-size: 1.35rem;
+	color: var(--ps-deep-green);
+}
+.ps-plan-card__price {
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--ps-saffron-dark);
+	margin-bottom: 1rem;
+}
+.ps-plan-card__price ins {
+	text-decoration: none;
+}
+.ps-plan-card__period {
+	font-size: 1rem;
+	font-weight: 400;
+	color: var(--ps-deep-green-light);
+}
+.ps-plan-card__desc {
+	color: var(--ps-deep-green-light);
+	margin-bottom: 1rem;
+}
+.ps-plan-card__items {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.75rem;
+	flex-grow: 1;
+}
+.ps-plan-card__items li {
+	padding: 0.4rem 0;
+	border-bottom: 1px dashed rgba(27, 67, 50, 0.12);
+}
+.ps-plan-card__items li::before {
+	content: "🌼 ";
+}
+.ps-plan-card__te {
+	color: var(--ps-gold);
+	font-weight: 500;
+}
+.ps-plan-card__cta {
+	width: 100%;
+	text-align: center;
+	border: none;
+}
+
+/* Delivery check */
+.ps-delivery-check__inner {
+	text-align: center;
+	max-width: 620px;
+}
+.ps-delivery-check__form {
+	display: flex;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.ps-delivery-check__form input {
+	flex: 1;
+	min-width: 220px;
+	padding: 0.85rem 1.25rem;
+	border-radius: 999px;
+	border: 2px solid rgba(27, 67, 50, 0.15);
+	font-family: var(--ps-font);
+	font-size: 1rem;
+}
+.ps-delivery-check__form input:focus {
+	outline: none;
+	border-color: var(--ps-saffron);
+}
+.ps-delivery-check__result {
+	margin-top: 1.25rem;
+	font-weight: 600;
+	color: var(--ps-deep-green);
+	background: rgba(27, 67, 50, 0.08);
+	display: inline-block;
+	padding: 0.6rem 1.25rem;
+	border-radius: 999px;
+}
+
+/* How it works */
+.ps-how__steps {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+.ps-how__step {
+	text-align: center;
+}
+.ps-how__num {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background: var(--ps-deep-green);
+	color: var(--ps-white);
+	font-size: 1.4rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 0.75rem;
+}
+.ps-how__step h3 {
+	margin: 0;
+	font-size: 1rem;
+}
+.ps-how__arrow {
+	font-size: 1.75rem;
+	color: var(--ps-gold);
+}
+
+/* FAQ */
+.ps-faq__inner {
+	max-width: 720px;
+}
+.ps-faq__item {
+	background: var(--ps-white);
+	border-radius: 12px;
+	padding: 1rem 1.5rem;
+	margin-bottom: 0.75rem;
+	box-shadow: var(--ps-shadow);
+}
+.ps-faq__item summary {
+	cursor: pointer;
+	font-weight: 600;
+}
+.ps-faq__item p {
+	margin: 0.75rem 0 0.25rem;
+	color: var(--ps-deep-green-light);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.ps-footer {
+	background: var(--ps-deep-green);
+	color: rgba(255, 255, 255, 0.85);
+	padding: 3.5rem 0 1.5rem;
+}
+.ps-footer__inner {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+.ps-footer a {
+	color: rgba(255, 255, 255, 0.85);
+}
+.ps-footer a:hover {
+	color: var(--ps-gold);
+}
+.ps-logo--light {
+	color: var(--ps-white);
+	font-weight: 700;
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+.ps-footer h4 {
+	color: var(--ps-white);
+	margin: 0 0 0.75rem;
+}
+.ps-footer__bottom {
+	text-align: center;
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.55);
+	padding-top: 1.5rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 640px) {
+	.ps-header__nav {
+		gap: 1rem;
+		font-size: 0.9rem;
+	}
+	.ps-hero {
+		padding: 3.5rem 0 3rem;
+	}
+	.ps-section {
+		padding: 3rem 0;
+	}
+}
