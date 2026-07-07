@@ -30,6 +30,21 @@ chown -R www-data:www-data "$CODE_DIR/wp-content/themes/pushpaseva"
 
 cd "$WP_DIR"
 wp theme activate pushpaseva --allow-root
+
+# WooCommerce store settings for India.
+wp option update woocommerce_currency "INR" --allow-root
+wp option update woocommerce_default_country "IN" --allow-root
+wp option update timezone_string "Asia/Kolkata" --allow-root
+
+# Use classic shortcode-based cart/checkout, not the WooCommerce block
+# versions — the Apartment Name / Flat Number custom fields (added via
+# the classic woocommerce_checkout_fields filter in functions.php) don't
+# render on the block-based checkout.
+CART_PAGE_ID=$(wp option get woocommerce_cart_page_id --allow-root)
+CHECKOUT_PAGE_ID=$(wp option get woocommerce_checkout_page_id --allow-root)
+wp post update "$CART_PAGE_ID" --post_content="[woocommerce_cart]" --allow-root
+wp post update "$CHECKOUT_PAGE_ID" --post_content="[woocommerce_checkout]" --allow-root
+
 wp cache flush --allow-root || true
 wp rewrite flush --allow-root
 
