@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'PUSHPASEVA_VERSION', '0.1.0' );
 
+require_once get_stylesheet_directory() . '/inc/rest-api.php';
+
 /**
  * Theme setup.
  */
