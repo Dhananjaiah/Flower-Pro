@@ -1,0 +1,58 @@
+# === SENSITIVE FILES - NEVER COMMIT ===
+.env
+.env.*
+.env.local
+.env.production
+.env.staging
+wp-config.php
+wp-config-local.php
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+auth.json
+
+# === WORDPRESS UPLOADS (too large) ===
+wp-content/uploads/
+
+# === CACHE ===
+wp-content/cache/
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+wp-content/wp-cache-config.php
+
+# === LOGS ===
+*.log
+error_log
+debug.log
+
+# === OS FILES ===
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === NODE ===
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# === NEXT.JS ===
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# === BUILD ARTIFACTS ===
+dist/
+build/
+*.min.map
+
